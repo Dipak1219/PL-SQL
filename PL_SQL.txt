@@ -1,0 +1,111 @@
+** PL/SQL Programs **
+
+	begin
+  		dbms_output.put_line('Hare Krishna,Hare Rama');
+		end;
+
+// if else statement
+1)
+    	declare
+	a number;
+	b number;
+	begin
+	a := &a;
+	b := &b;
+
+	if  a > b then
+	dbms_output.put_line('a is max');
+	else
+	dbms_output.put_line('b is max');
+	end if;
+	end;
+
+2)  
+	declare
+	n number := &n;
+	begin
+		if  n mod 2 = 0 then
+		dbms_output.put_line('Number is Even');
+		else
+		dbms_output.put_line('Number is Odd');
+	end if;
+	end;
+
+// if elsif statement
+	
+	declare
+	ch varchar2(20) := &ch;
+	begin
+		if ch = 'A' then
+		dbms_output.put_line('A for Apple');
+		elsif ch = 'B' then 
+		dbms_output.put_line('B for Ball');
+		elsif ch = 'C' then 
+		dbms_output.put_line('C for Cat');
+		elsif ch = 'D' then 
+		dbms_output.put_line('D for me!');
+		elsif ch = 'E' then 
+		dbms_output.put_line('E for Eat');
+		else
+		dbms_output.put_line('You entered wrong choice!');
+	end if;
+	end;
+
+// Nested if statement 
+
+	declare
+	n number := &n;
+	begin
+	if n >= 0 then 
+		if n = 0 then
+		dbms_output.put_line('Value of n: '|| n || ' that is zero' );
+		else
+		dbms_output.put_line('Value of n: '|| n || ' that is positive number');
+		end if;
+	else
+		dbms_output.put_line('Value of n: '|| n || ' that is negative number');
+	end if;
+	end;
+
+
+
+
+
+// Case Statement
+declare 
+n number;
+begin
+n := &n;
+case n
+	when 1 then
+	dbms_output.put_line('Sunday');
+	when 2 then
+	dbms_output.put_line('Monday');
+	when 3 then
+	dbms_output.put_line('Tuesday');
+	when 4 then
+	dbms_output.put_line('Wednesday');
+	when 5 then
+	dbms_output.put_line('Thursday');
+	when 6 then
+	dbms_output.put_line('Friday');
+	when 7 then
+		dbms_output.put_line('Saturday');
+else
+	dbms_output.put_line('You are dealing with wrong wrong number');
+end case;
+end;
+
+// goto Statement
+
+begin
+	dbms_output.put_line('Sunday');
+	dbms_output.put_line('Monday');
+	dbms_output.put_line('Tuesday');
+goto day;
+	dbms_output.put_line('Wednesday');
+	dbms_output.put_line('Thursday');
+<<day>>
+	dbms_output.put_line('Friday');
+	dbms_output.put_line('Saturday');
+end;
