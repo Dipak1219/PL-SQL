@@ -109,3 +109,79 @@ goto day;
 	dbms_output.put_line('Friday');
 	dbms_output.put_line('Saturday');
 end;
+
+// Sum of Digits 
+declare
+n number := &n;
+s number := 0;
+r number;
+begin
+	while n > 0
+loop
+	r := n mod 10;
+	s := s + r;
+	n := trunc(n / 10);
+end loop;
+	dbms_output.put_line('Sum of Digit: ' || s);
+end;
+
+// Reverse Number
+
+declare
+n number := &n;
+s number := 0;
+r number;
+begin
+	while n > 0
+loop
+	r := n mod 10;
+	s := s * 10 + r;
+	n := trunc(n / 10);
+end loop;
+	dbms_output.put_line('Reversed number: ' || s);
+end;
+
+// Palindrome Number
+
+declare 
+n number := &n;
+s number := 0;
+r number;
+temp number;
+begin
+temp := n;
+	while n > 0
+	loop
+		r := mod(n,10);
+		s:= s * 10 + r;
+		n:= trunc(n / 10 );
+	end loop;
+	if s= temp then
+		dbms_output.put_line('Palindrome number');
+	else
+		dbms_output.put_line('Not a Palindrome number');
+	end if;
+end;
+
+
+// Armstrong Number
+
+declare 
+n number := &n;
+s number := 0;
+r number;
+temp number;
+begin
+temp := n;
+	while n > 0
+	loop
+		r := mod(n,10);
+		s := s+(r*r*r);
+		n:= trunc(n / 10 );
+	end loop;
+	if s= temp then
+		dbms_output.put_line('Armstrong number');
+	else
+		dbms_output.put_line('Not a Armstrong number');
+	end if;
+end;
