@@ -1,5 +1,9 @@
 ** PL/SQL Programs **
 
+NOTE: Make sure you have enabled server output in your SQL
+   ==>	set serveroutput on;
+
+
 	begin
   		dbms_output.put_line('Hare Krishna,Hare Rama');
 		end;
