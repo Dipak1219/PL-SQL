@@ -62,7 +62,7 @@ BEGIN
     WHILE N > 0 LOOP
         R := MOD(N,10);
         S := S + (R*R*R);
-        N := TRUNC(N / 10);
+        N := TRUNC(N / 10);  --TRUNC() IS MUST
     END LOOP;
 RETURN S;
 END;
